@@ -1,0 +1,42 @@
+{
+  "name": "@bikejs/react-bem",
+  "version": "1.0.4",
+  "description": "This is help package for use BEM methodology in React components",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm ./dist/* 2> /dev/null & webpack --client-log-level error --config webpack.config.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bike-JS/react-bem.git"
+  },
+  "keywords": [
+    "BEM",
+    "React",
+    "React",
+    "BEM"
+  ],
+  "author": "Alex Khyrenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bike-JS/react-bem/issues"
+  },
+  "homepage": "https://github.com/Bike-JS/react-bem#readme"
+}
