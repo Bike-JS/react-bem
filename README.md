@@ -12,7 +12,7 @@ Example for use as decorator
 
 ```jsx harmony
 import React from 'react';
-import BEM from '@bikejs/react-bem';
+import { BEM } from '@bikejs/react-bem';
 
 @BEM('my-component')
 export class Component extends React.PureComponent {
