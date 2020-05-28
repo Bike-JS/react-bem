@@ -1,5 +1,9 @@
 import React, { useMemo } from 'react';
 
+const camel2Dash = (value = '') => (
+  value.replace(/([a-zA-Z])(?=[A-Z0-9])/g, '$1-').toLowerCase()
+);
+
 const BEMDecorator = (block) => (elem, mods) => {
   let base = block;
 
