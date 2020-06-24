@@ -6,9 +6,10 @@ const camel2Dash = (value = '') => (
 
 const BEMDecorator = (block, className) => (elem, mods) => {
   let base = block;
+  let cn = className && (!elem || typeof elem === 'object') ? `${className} ` : '';
 
   if (!elem) {
-    return block + (className ? ` ${className}` : '');
+    return cn + block;
   }
 
   if (typeof elem === 'object') {
@@ -20,7 +21,7 @@ const BEMDecorator = (block, className) => (elem, mods) => {
     base = `${block}__${elem}`;
   }
 
-  return base + (mods ? Object.entries(mods).reduce((target, [key, value]) => {
+  return cn + base + (mods ? Object.entries(mods).reduce((target, [key, value]) => {
     if (!value) {
       return target;
     }
