@@ -54,3 +54,29 @@ export const MyComponent = () => {
   );
 }
 ```
+
+`className` proxying is also supported
+
+```jsx harmony
+import React from 'react';
+import { BEM } from '@bikejs/react-bem';
+
+@BEM('my-component')
+class Component extends React.Component {
+  render() {
+    const { bem } = this.props;
+    return <div className={bem()}/>;
+  }
+}
+
+@BEM('my-app')
+class App extends React.Component {
+  render() {
+    const { bem } = this.props;
+    return <Component className={bem()}/>;
+  }
+}
+
+// App render result:
+// <div class="my-app my-component"></div>
+```
