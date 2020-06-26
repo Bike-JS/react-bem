@@ -32,7 +32,7 @@ const BEMDecorator = (block, className) => (elem, mods) => {
   }, '') : '');
 };
 
-const useBEM = (block, className) => useMemo(() => BEMDecorator(block, className), [block]);
+const useBEM = (block, className) => useMemo(() => BEMDecorator(block, className), [block, className]);
 
 const BEM = (block) => (Component) => (props) => {
   const bem = useBEM(block, props.className);
